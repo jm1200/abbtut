@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "build:server": "lerna run build --scope={@abb/common,@abb/server}",
+    "build:web": "lerna run build --scope={@abb/common,@abb/web,@abb/controller}"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/rimraf",
+      "**/rimraf/**",
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**",
+      "**/react-native-typescript-transformer",
+      "**/react-native-typescript-transformer/**",
+      "**/metro-bundler-config-yarn-workspaces",
+      "**/metro-bundler-config-yarn-workspaces/**"
+     
+    ]
+  },
+  "resolutions": {
+    "graphql": "0.13.1"
+  },
+  "name": "abb",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
